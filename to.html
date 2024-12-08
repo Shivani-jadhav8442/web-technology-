@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="my">
+<head>
+
+    <script src="min.js"></script>
+    <script src="to.js"></script>
+</head>
+<body ng-controller="myController">
+    
+   <table border="2px" solid black>
+    <p>Enter the task:<input type="text" ng-model="tname"><br> </p>
+    <button ng-click="addtask()">Add Task</button>
+    
+    
+<caption>Table<hr></caption>
+<tr>
+    <th>Task name</th>
+    <th>Delete Task</th>
+    <th>Edit Task</th>
+    
+</tr>
+
+<tr ng-repeat="my in arr">
+<td ng-repeat="(key,value) in my">{{value}}</td>
+<td><button ng-click="deletetask($index)">Delete</button></td>
+<td><button ng-click="edittask($index)">Edit</button></td>
+</tr>
+   </table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html ng-app="myMod">
+    <!-- //myMod is name of module in module.js file -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="min.js"></script>
+    <!-- // must to link module file in this script tag -->
+     <script src="module.js"></script>
+</head>
+<body>
+    <!-- // module used in this code-->
+     <div ng-controller="myController">
+        <!-- <h2>{{name | lowercase}}</h2> -->
+        <!-- app the filer here by using pipe -->
+
+
+        <!-- <h2>{{amount | number:2 }}</h2> -->
+
+        <h2>{{amount | currency:"Rs " }}</h2>
+     </div>
+
+</body>
+</html>
